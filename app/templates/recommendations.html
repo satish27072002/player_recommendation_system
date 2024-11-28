@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Recommendations</title>
+</head>
+<body>
+    <h1>Player Recommendations</h1>
+
+    <!-- Render recommendations -->
+    <div>
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+    </div>
+
+    <!-- Back Button -->
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Recommendation System</title>
+</head>
+<body>
+    <h1>Welcome to the Player Recommendation System</h1>
+
+    <!-- Display message if available -->
+    {% if message %}
+        <p style="color: red;">{{ message }}</p>
+    {% endif %}
+
+    <!-- Recommendation Form -->
+    <form action="/recommend" method="post">
+        <label for="role">Select Role:</label>
+        <select name="role" id="role">
+            <option value="batsman">Batsman</option>
+            <option value="bowler">Bowler</option>
+            <option value="allrounder">All-Rounder</option>
+        </select>
+        <br><br>
+        <label for="threshold">Enter Threshold:</label>
+        <input type="number" id="threshold" name="threshold" step="0.1" required>
+        <br><br>
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>
